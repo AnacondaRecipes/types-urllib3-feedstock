@@ -1,5 +1,5 @@
 {% set name = "types-urllib3" %}
-{% set version = "1.26.25.5" %}
+{% set version = "1.26.25.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-urllib3-{{ version }}.tar.gz
-  sha256: 5630e578246d170d91ebe3901788cd28d53c4e044dc2e2488e3b0d55fb6895d8
+  sha256: 3300538c9dc11dad32eae4827ac313f5d986b8b21494801f1bf97a1ac6c03ae5
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
+  skip: True  # [ py<38]
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
 
 test:
   commands:
@@ -29,6 +29,10 @@ test:
 
 about:
   home: https://github.com/python/typeshed
+  description: |
+    Typeshed contains external type annotations for the Python standard
+    library and Python builtins, as well as third party packages as contributed
+    by people external to those projects.
   summary: Typing stubs for urllib3
   license: Apache-2.0
   # License need to be packaged from upstream
