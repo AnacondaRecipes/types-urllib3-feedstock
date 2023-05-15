@@ -41,6 +41,7 @@ about:
   doc_url: https://github.com/python/typeshed/blob/main/README.md
   # License need to be packaged from upstream
   license_file: LICENSE
+  license_family: Apache-2.0
 
 extra:
   recipe-maintainers:
