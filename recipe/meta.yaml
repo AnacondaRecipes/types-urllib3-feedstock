@@ -18,6 +18,8 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
 
@@ -35,6 +37,8 @@ about:
     by people external to those projects.
   summary: Typing stubs for urllib3
   license: Apache-2.0
+  dev_url: https://github.com/python/typeshed
+  doc_url: https://github.com/python/typeshed/blob/main/README.md
   # License need to be packaged from upstream
   license_file: LICENSE
 
