@@ -12,7 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
-  skip: True  # [ py<38]
+  skip: True  # [py<38]
 
 requirements:
   host:
@@ -24,6 +24,8 @@ requirements:
     - python
 
 test:
+  imports:
+    - types
   commands:
     - pip check
   requires:
