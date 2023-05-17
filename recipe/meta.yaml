@@ -20,7 +20,7 @@ requirements:
     - pip
     - wheel
   run:
-    - python >=3.6
+    - python
 
 test:
   commands:
